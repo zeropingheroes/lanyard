@@ -23,5 +23,8 @@
         "ext-pdo": "*",
         "ext-tokenizer": "*",
         "ext-openssl": "*"
+    },
+    "require-dev": {
+        "laravel/homestead": "^6.2"
     }
 }
