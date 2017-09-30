@@ -1,0 +1,8 @@
+We would like to acknowledge all of the following people
+for contributing to the Lanyard project.
+
+Main Authors:
+Oliver Baker <ilumos@gmail.com>
+Michael Geering <michaelgeering@gmail.com>
+
+Contributors:
