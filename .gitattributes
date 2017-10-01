@@ -3,3 +3,8 @@
 
 # Force the following filetypes to have unix eols, so Windows does not break them
 *.* text eol=lf
+
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
