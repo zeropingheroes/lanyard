@@ -16,16 +16,16 @@
   ],
   "require": {
     "php": ">=7.1",
-    "ext-mbstring": "*",
     "ext-dom": "*",
     "ext-json": "*",
-    "ext-xml": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
     "ext-pdo": "*",
     "ext-tokenizer": "*",
-    "ext-openssl": "*",
+    "ext-xml": "*",
+    "fideloper/proxy": "~3.3",
     "laravel/framework": "5.5.*",
-    "laravel/tinker": "~1.0",
-    "fideloper/proxy": "~3.3"
+    "laravel/tinker": "~1.0"
   },
   "require-dev": {
     "laravel/homestead": "^6.2",
