@@ -18,6 +18,10 @@
                             <div class="col-md-4"><strong>Full name:</strong></div>
                             <div class="col-md-6">{{ $user->full_name }}</div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4"><strong>Email address:</strong></div>
+                            <div class="col-md-6">{{ $user->email }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
