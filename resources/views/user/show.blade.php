@@ -10,6 +10,7 @@
                     <div class="panel-heading"><h1>{{ $user->username }}</h1></div>
 
                     <div class="panel-body">
+                        @include('components.alerts')
                         <div class="row">
                             <div class="col-md-4"><strong>{{ lang('models.user.username') }}:</strong></div>
                             <div class="col-md-6">{{ $user->username }}</div>

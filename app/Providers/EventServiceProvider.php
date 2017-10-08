@@ -13,8 +13,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        'App\Events\User\EmailAddressUpdated' => [
+            'App\Listeners\User\ResetEmailVerificationToken',
+        ],
+        'App\Events\User\EmailVerificationTokenReset' => [
+            'App\Listeners\User\SendVerificationEmail',
         ],
         'SocialiteProviders\Manager\SocialiteWasCalled' => [
             'SocialiteProviders\Steam\SteamExtendSocialite@handle',

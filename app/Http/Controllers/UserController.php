@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\User\EmailAddressUpdated;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -62,8 +63,46 @@ class UserController extends Controller
         $user->fill(
             $request->only(['full_name', 'email'])
         );
+
+        // TODO: Move check to observer
+        if ($user->isDirty('email')) {
+            event(new EmailAddressUpdated($user));
+        }
+
         $user->save();
 
+        // TODO: Show alert on profile page
         return redirect()->route('user.profile', $id);
     }
+
+    /**
+     * Verify the user's email address
+     *
+     * @param $id
+     * @param $token
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function verifyEmail($id, $token)
+    {
+        $user = User::where('email_verified', false)->findOrFail($id);
+
+        // TODO: Allow verification when not logged in, OR redirect to verification after login
+        $this->authorize('update', $user);
+
+        if ($user->email_verification_token != $token) {
+            return redirect()
+                ->route('user.profile', $user->id)
+                ->with('alerts', [['message' => lang('models.user.invalid-email-verification-token'), 'type' => 'danger']]);
+        }
+
+        $user->email_verified = true;
+        $user->email_verification_token = null;
+
+        $user->save();
+
+        return redirect()
+            ->route('user.profile', $user->id)
+            ->with('alerts', [['message' => lang('models.user.email-verified'), 'type' => 'success']]);
+    }
+
 }

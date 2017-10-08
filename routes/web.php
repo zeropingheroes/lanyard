@@ -24,3 +24,6 @@ Route::get('user/{id}/edit', 'UserController@edit')
 
 Route::patch('user/{id}', 'UserController@update')
     ->name('user.update');
+
+Route::get('user/{id}/verify-email/{token}', 'UserController@verifyEmail')
+    ->name('user.email.verify');
