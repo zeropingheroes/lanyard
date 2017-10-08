@@ -43,6 +43,12 @@
                                     <input type="email" class="form-control" id="email" name="email" placeholder="{{ lang('models.user.email') }}" value="{{ old('email', $user->email) }}">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-4 control-label">{{ lang('models.user.email_confirmation') }}</label>
+                                <div class="col-sm-8">
+                                    <input type="email" class="form-control" id="email_confirmation" name="email_confirmation" placeholder="{{ lang('models.user.email_confirmation') }}" value="{{ old('email_confirmation', $user->email) }}">
+                                </div>
+                            </div>
                             <button type="submit" class="btn btn-primary center-block">{{ lang('routes.user.update') }}</button>
                         </form>
                     </div>

@@ -56,7 +56,7 @@ class UserController extends Controller
 
         $request->validate([
             'full_name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
+            'email' => 'required|email|confirmed|unique:users,email,'.$id,
         ]);
 
         $user->fill(
