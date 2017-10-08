@@ -38,7 +38,7 @@ class AuthController extends Controller
             return Socialite::with('steam')->redirect();
         }
 
-        throw new AuthenticationException('Unsupported OAuth authentication provider');
+        throw new AuthenticationException(lang('auth.provider-not-supported', ['provider' => $OAuthProvider]));
     }
 
     /**
@@ -69,7 +69,7 @@ class AuthController extends Controller
             return redirect('/');
         }
 
-        throw new AuthenticationException('Unsupported authentication provider');
+        throw new AuthenticationException(lang('auth.provider-not-supported', ['provider' => $OAuthProvider]));
     }
 
     /**

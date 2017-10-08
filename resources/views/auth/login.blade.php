@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Login')
+@section('title', lang('routes.login'))
 
 @section('content')
     <div class="container">
@@ -10,9 +10,19 @@
                     <div class="panel-heading">Login</div>
 
                     <div class="panel-body">
-                        <a href="{{ url('/auth/steam') }}"><img src="{{ asset('images/sits_small.png') }}"
-                                                                alt="Sign in through Steam"
-                                                                class="img-responsive center-block"></a>
+                        <div class="row">
+                            <p class="text-center">{{ lang('auth.please-sign-in') }}</p>
+                        </div>
+                        <div class="row">
+                            <a href="{{ url('/auth/steam') }}"><img src="{{ asset('images/sits_small.png') }}"
+                                                                    alt="{{ lang('auth.sits') }}"
+                                                                    class="img-responsive center-block"></a>
+                        </div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">
+                            <p class="text-center">{{ lang('auth.no-steam-account') }} <a
+                                        href="https://store.steampowered.com/join/">{{ lang('auth.create-steam-account') }}<a/></p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,23 +11,22 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-4"><strong>Username:</strong></div>
+                            <div class="col-md-4"><strong>{{ lang('models.user.username') }}:</strong></div>
                             <div class="col-md-6">{{ $user->username }}</div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4"><strong>Full name:</strong></div>
+                            <div class="col-md-4"><strong>{{ lang('models.user.full_name') }}:</strong></div>
                             <div class="col-md-6">{{ $user->full_name }}</div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4"><strong>Email address:</strong></div>
+                            <div class="col-md-4"><strong>{{ lang('models.user.email') }}:</strong></div>
                             <div class="col-md-6">{{ $user->email }}</div>
                         </div>
                         @can('update', $user)
                             <div class="row">&nbsp;</div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a class="btn btn-default" href="{{ route('user.edit', $user->id) }}" role="button">Edit
-                                        Profile</a>
+                                    <a class="btn btn-default" href="{{ route('user.edit', $user->id) }}" role="button">{{ lang('routes.user.edit') }}</a>
                                 </div>
                             </div>
                         @endcan
