@@ -1,7 +1,5 @@
 <?php
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('login', 'Auth\AuthController@showLoginForm')->name('login');
 
-Route::get('/', function () {
-    return view('welcome');
-});
