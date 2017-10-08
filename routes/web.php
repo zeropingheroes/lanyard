@@ -1,8 +1,19 @@
 <?php
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')
+    ->name('home');
 
-Route::get('login', 'Auth\AuthController@showLoginForm')->name('login');
-Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider')->name('auth');
-Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
-Route::post('logout', 'Auth\AuthController@logout')->name('logout');
+/* Auth */
+Route::namespace('Auth')->group(function () {
 
+    Route::get('login', 'AuthController@showLoginForm')
+        ->name('login');
+
+    Route::get('auth/{provider}', 'AuthController@redirectToProvider')
+        ->name('auth');
+
+    Route::get('auth/{provider}/callback', 'AuthController@handleProviderCallback')
+        ->name('auth.callback');
+
+    Route::post('logout', 'AuthController@logout')
+        ->name('logout');
+});
