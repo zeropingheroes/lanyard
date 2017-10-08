@@ -14,3 +14,7 @@ Route::get('auth/{provider}/callback', 'AuthController@handleProviderCallback')
 
 Route::post('logout', 'AuthController@logout')
     ->name('logout');
+
+/* User */
+Route::get('user/{id}', 'UserController@show')
+    ->name('user.show');
