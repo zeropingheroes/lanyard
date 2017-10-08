@@ -99,8 +99,7 @@ class AuthController extends Controller
         $user = User::where('provider_id', $OAuthUser->id)->first();
         if ($user) {
 
-            if($OAuthProvider == 'steam')
-            {
+            if ($OAuthProvider == 'steam') {
                 // Update username
                 $user->username = $OAuthUser->nickname;
             }
