@@ -24,26 +24,26 @@
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">{{ lang('models.user.username') }}</label>
-                                <div class="col-sm-10">
+                                <label class="col-sm-4 control-label">{{ lang('models.user.username') }}</label>
+                                <div class="col-sm-8">
                                     <p class="form-control-static">{{ $user->username }}</p>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="full_name" class="col-sm-2 control-label">{{ lang('models.user.full_name') }}</label>
-                                <div class="col-sm-10">
+                                <label for="full_name" class="col-sm-4 control-label">{{ lang('models.user.full_name') }}</label>
+                                <div class="col-sm-8">
                                     <input type="text" class="form-control" id="full_name" name="full_name" placeholder="{{ lang('models.user.full_name') }}" value="{{ old('full_name', $user->full_name) }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">{{ lang('models.user.email') }}</label>
-                                <div class="col-sm-10">
+                                <label for="email" class="col-sm-4 control-label">{{ lang('models.user.email') }}</label>
+                                <div class="col-sm-8">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="{{ lang('models.user.email') }}" value="{{ old('email', $user->email) }}">
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">{{ lang('routes.user.update') }}</button>
+                            <button type="submit" class="btn btn-primary center-block">{{ lang('routes.user.update') }}</button>
                         </form>
                     </div>
                 </div>
