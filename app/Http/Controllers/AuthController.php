@@ -16,13 +16,6 @@ class AuthController extends Controller
 {
 
     /**
-     * Where to redirect users after authentication.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/';
-
-    /**
      * Show the login page.
      *
      * @return \Illuminate\Http\Response
@@ -63,7 +56,7 @@ class AuthController extends Controller
             $user = $this->findOrCreateUser($OAuthUser, 'steam');
             Auth::login($user, true);
 
-            return redirect($this->redirectTo);
+            return redirect('/');
         }
 
         throw new AuthenticationException('Unsupported authentication provider');
