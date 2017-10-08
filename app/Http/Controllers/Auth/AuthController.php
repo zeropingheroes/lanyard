@@ -117,6 +117,7 @@ class AuthController extends Controller
         return User::firstOrCreate([
             'full_name' => $OAuthUser->name,
             'username' => $OAuthUser->nickname,
+            'email' => $OAuthUser->email,
             'provider' => $OAuthProvider,
             'provider_id' => $OAuthUser->id
         ]);
