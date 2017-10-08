@@ -22,6 +22,15 @@
                             <div class="col-md-4"><strong>Email address:</strong></div>
                             <div class="col-md-6">{{ $user->email }}</div>
                         </div>
+                        @can('update', $user)
+                            <div class="row">&nbsp;</div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a class="btn btn-default" href="{{ route('user.edit', $user->id) }}" role="button">Edit
+                                        Profile</a>
+                                </div>
+                            </div>
+                        @endcan
                     </div>
                 </div>
             </div>

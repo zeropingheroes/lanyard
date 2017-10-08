@@ -18,3 +18,9 @@ Route::post('logout', 'AuthController@logout')
 /* User */
 Route::get('user/{id}', 'UserController@show')
     ->name('user.profile');
+
+Route::get('user/{id}/edit', 'UserController@edit')
+    ->name('user.edit');
+
+Route::patch('user/{id}', 'UserController@update')
+    ->name('user.update');
