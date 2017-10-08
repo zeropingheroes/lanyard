@@ -10,6 +10,7 @@
                     <div class="panel-heading"><h1>Edit Profile</h1></div>
 
                     <div class="panel-body">
+                        @include('components.alerts')
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
