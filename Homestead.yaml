@@ -6,6 +6,12 @@ sites:
     -
         map: lanyard.localhost
         to: /vagrant/public
+folders:
+    -
+        map: .
+        to: /vagrant
+        type: "nfs"
+        mount_options: ['nolock,vers=3,udp,noatime']
 databases:
     - homestead
 name: lanyard.localhost
