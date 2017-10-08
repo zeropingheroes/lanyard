@@ -26,7 +26,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        return view('user.profile', ['user' => $user]);
+        return view('user.show', ['user' => $user]);
     }
 
     /**
@@ -39,7 +39,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $this->authorize('update', $user);
-        return view('user.edit-profile', ['user' => $user]);
+        return view('user.edit', ['user' => $user]);
     }
 
     /**
