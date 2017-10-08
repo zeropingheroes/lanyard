@@ -56,6 +56,16 @@ class AuthController extends Controller
             $user = $this->findOrCreateUser($OAuthUser, 'steam');
             Auth::login($user, true);
 
+            if (!$user->full_name OR !$user->email) {
+
+                $alerts = [
+                    ['message' => lang('auth.profile-update-required'), 'type' => 'info']
+                ];
+
+                return redirect()
+                    ->route('user.edit', $user->id)
+                    ->with('alerts', $alerts);
+            }
             return redirect('/');
         }
 
