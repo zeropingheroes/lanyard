@@ -64,11 +64,6 @@ class UserController extends Controller
             $request->only(['full_name', 'email'])
         );
 
-        // TODO: Move check to observer
-        if ($user->isDirty('email')) {
-            event(new EmailAddressUpdated($user));
-        }
-
         $user->save();
 
         // TODO: Show alert on profile page
