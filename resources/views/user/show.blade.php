@@ -21,7 +21,14 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4"><strong>{{ lang('models.user.email') }}:</strong></div>
-                            <div class="col-md-6">{{ $user->email }}</div>
+                            <div class="col-md-6">
+                                @if($user->email_verified)
+                                    <span class="label label-success">{{ lang('models.user.email_is_verified') }}</span>
+                                @else
+                                    <span class="label label-danger">{{ lang('models.user.email_is_not_verified') }}</span>
+                                @endif
+                                {{ $user->email }}
+                            </div>
                         </div>
                         @can('update', $user)
                             <div class="row">&nbsp;</div>
