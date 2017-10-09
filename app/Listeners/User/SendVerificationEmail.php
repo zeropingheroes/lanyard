@@ -17,8 +17,9 @@ class SendVerificationEmail implements ShouldQueue
      */
     public function handle(EmailVerificationTokenReset $event)
     {
-        $email = new VerificationEmail($event->user);
+        $user = $event->user;
+        $email = new VerificationEmail($user);
 
-        Mail::to($event->user->email)->send($email);
+        Mail::to($user->email)->send($email);
     }
 }
