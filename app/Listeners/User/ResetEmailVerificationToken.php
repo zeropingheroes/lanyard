@@ -4,6 +4,7 @@ namespace App\Listeners\User;
 
 use App\Events\User\EmailAddressUpdated;
 use App\Events\User\EmailVerificationTokenReset;
+use App\User;
 
 class ResetEmailVerificationToken
 {
@@ -15,9 +16,12 @@ class ResetEmailVerificationToken
      */
     public function handle(EmailAddressUpdated $event)
     {
-        $event->user->email_verified = false;
-        $event->user->email_verification_token = md5(uniqid(rand()));
-        $event->user->save();
-        event(new EmailVerificationTokenReset($event->user));
+        $user = User::findOrFail($event->user->id);
+
+        $user->email_verified = false;
+        $user->email_verification_token = md5(uniqid(rand()));
+        $user->save();
+
+        event(new EmailVerificationTokenReset($user));
     }
 }
