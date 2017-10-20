@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Providers;
+namespace Zeropingheroes\Lanyard\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use App\Policies\UserPolicy;
-use App\User;
+use Zeropingheroes\Lanyard\Policies\UserPolicy;
+use Zeropingheroes\Lanyard\User;
 
 class AuthServiceProvider extends ServiceProvider
 {

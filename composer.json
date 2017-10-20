@@ -42,7 +42,7 @@
       "database/factories"
     ],
     "psr-4": {
-      "App\\": "app/"
+      "Zeropingheroes\\Lanyard\\": "app/"
     },
     "files": [
       "app/helpers.php"

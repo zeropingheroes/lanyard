@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Zeropingheroes\Lanyard\Http\Controllers;
 
 use Illuminate\Auth\AuthenticationException;
 use Socialite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\User;
+use Zeropingheroes\Lanyard\User;
 
 /**
  * Class AuthController
- * @package App\Http\Controllers\Auth
+ * @package Zeropingheroes\Lanyard\Http\Controllers\Auth
  */
 class AuthController extends Controller
 {

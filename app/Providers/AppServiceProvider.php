@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Providers;
+namespace Zeropingheroes\Lanyard\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\User;
-use App\Observers\UserObserver;
+use Zeropingheroes\Lanyard\User;
+use Zeropingheroes\Lanyard\Observers\UserObserver;
 
 class AppServiceProvider extends ServiceProvider
 {

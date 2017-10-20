@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Listeners;
+namespace Zeropingheroes\Lanyard\Listeners;
 
 use Mail;
-use App\User;
-use App\Mail\VerificationEmail;
+use Zeropingheroes\Lanyard\User;
+use Zeropingheroes\Lanyard\Mail\VerificationEmail;
 
 class EmailVerificationEventSubscriber
 {
@@ -61,13 +61,13 @@ class EmailVerificationEventSubscriber
     public function subscribe($events)
     {
         $events->listen(
-            'App\Events\User\EmailAddressUpdated',
-            'App\Listeners\EmailVerificationEventSubscriber@startEmailVerification'
+            'Zeropingheroes\Lanyard\Events\User\EmailAddressUpdated',
+            'Zeropingheroes\Lanyard\Listeners\EmailVerificationEventSubscriber@startEmailVerification'
         );
 
         $events->listen(
-            'App\Events\User\EmailVerificationEmailResendRequested',
-            'App\Listeners\EmailVerificationEventSubscriber@sendVerificationEmail'
+            'Zeropingheroes\Lanyard\Events\User\EmailVerificationEmailResendRequested',
+            'Zeropingheroes\Lanyard\Listeners\EmailVerificationEventSubscriber@sendVerificationEmail'
         );
     }
 

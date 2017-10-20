@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Observers;
+namespace Zeropingheroes\Lanyard\Observers;
 
-use App\User;
-use App\Events\User\EmailAddressUpdated;
+use Zeropingheroes\Lanyard\User;
+use Zeropingheroes\Lanyard\Events\User\EmailAddressUpdated;
 
 class UserObserver
 {

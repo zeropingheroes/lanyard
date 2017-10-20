@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Events\User;
+namespace Zeropingheroes\Lanyard\Events\User;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use App\User;
+use Zeropingheroes\Lanyard\User;
 
 class EmailAddressUpdated
 {

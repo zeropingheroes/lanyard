@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Zeropingheroes\Lanyard\Http\Controllers;
 
-use App\Events\User\EmailAddressUpdated;
-use App\Events\User\EmailVerificationEmailResendRequested;
-use App\User;
+use Zeropingheroes\Lanyard\Events\User\EmailAddressUpdated;
+use Zeropingheroes\Lanyard\Events\User\EmailVerificationEmailResendRequested;
+use Zeropingheroes\Lanyard\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller

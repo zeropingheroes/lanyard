@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Policies;
+namespace Zeropingheroes\Lanyard\Policies;
 
-use App\User;
+use Zeropingheroes\Lanyard\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class UserPolicy
@@ -12,8 +12,8 @@ class UserPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\User  $user
-     * @param  \App\User  $model
+     * @param  \Zeropingheroes\Lanyard\User  $user
+     * @param  \Zeropingheroes\Lanyard\User  $model
      * @return mixed
      */
     public function update(User $user, User $model)

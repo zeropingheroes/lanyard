@@ -172,11 +172,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Zeropingheroes\Lanyard\Providers\AppServiceProvider::class,
+        Zeropingheroes\Lanyard\Providers\AuthServiceProvider::class,
+        // Zeropingheroes\Lanyard\Providers\BroadcastServiceProvider::class,
+        Zeropingheroes\Lanyard\Providers\EventServiceProvider::class,
+        Zeropingheroes\Lanyard\Providers\RouteServiceProvider::class,
 
     ],
 
