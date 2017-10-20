@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\User\EmailAddressUpdated;
+use App\Events\User\EmailVerificationEmailResendRequested;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -98,6 +99,24 @@ class UserController extends Controller
         return redirect()
             ->route('user.profile', $user->id)
             ->with('alerts', [['message' => lang('models.user.email-verified'), 'type' => 'success']]);
+    }
+
+    /**
+     * Resend the verification email
+     *
+     * @param $id
+     * @param $token
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function resendVerificationEmail($id)
+    {
+        $user = User::where('email_verified', false)->findOrFail($id);
+
+        event(new EmailVerificationEmailResendRequested($user));
+
+        return redirect()
+            ->route('user.profile', $user->id)
+            ->with('alerts', [['message' => lang('models.user.email-verification-resent'), 'type' => 'success']]);
     }
 
 }

@@ -12,4 +12,6 @@ return [
     'user.email-verified' => 'Email address successfully verified',
     'user.invalid-email-verification-token' => 'Invalid email verification token',
 
+    'user.email-verification-resent' => 'Email verification has been resent',
+
 ];

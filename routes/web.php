@@ -27,3 +27,6 @@ Route::patch('user/{id}', 'UserController@update')
 
 Route::get('user/{id}/verify-email/{token}', 'UserController@verifyEmail')
     ->name('user.email.verify');
+
+Route::get('user/{id}/resend-verification-email', 'UserController@resendVerificationEmail')
+    ->name('user.email.resend-verification-email');

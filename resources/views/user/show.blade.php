@@ -35,6 +35,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <a class="btn btn-default" href="{{ route('user.edit', $user->id) }}" role="button">{{ lang('routes.user.edit') }}</a>
+                                    @if(! $user->email_verified)
+                                        <a class="btn btn-default" href="{{ route('user.email.resend-verification-email', $user->id) }}" role="button">{{ lang('routes.user.resend-verification-email') }}</a>
+                                    @endif
                                 </div>
                             </div>
                         @endcan
