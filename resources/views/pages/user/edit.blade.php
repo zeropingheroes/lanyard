@@ -43,9 +43,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-sm-4 control-label">@lang('title.email-confirmation')</label>
+                            <label for="email" class="col-sm-4 control-label">@lang('title.confirm-email')</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="email_confirmation" name="email_confirmation" placeholder="@lang('title.email-confirmation')" value="{{ old('email_confirmation', $user->email) }}">
+                                <input type="email" class="form-control" id="email_confirmation" name="email_confirmation" placeholder="@lang('title.confirm-email')" value="{{ old('email_confirmation', $user->email) }}">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary center-block">@lang('title.update-profile')</button>
