@@ -88,7 +88,7 @@ class UserController extends Controller
         if ($user->email_verification_token != $token) {
             return redirect()
                 ->route('user.profile', $user->id)
-                ->with('alerts', [['message' => lang('models.user.invalid-email-verification-token'), 'type' => 'danger']]);
+                ->with('alerts', [['message' => lang('phrase.invalid-email-verification-token'), 'type' => 'danger']]);
         }
 
         $user->email_verified = true;
@@ -98,7 +98,7 @@ class UserController extends Controller
 
         return redirect()
             ->route('user.profile', $user->id)
-            ->with('alerts', [['message' => lang('models.user.email-verified'), 'type' => 'success']]);
+            ->with('alerts', [['message' => lang('phrase.email-verified'), 'type' => 'success']]);
     }
 
     /**
@@ -116,7 +116,7 @@ class UserController extends Controller
 
         return redirect()
             ->route('user.profile', $user->id)
-            ->with('alerts', [['message' => lang('models.user.email-verification-resent'), 'type' => 'success']]);
+            ->with('alerts', [['message' => lang('phrase.email-verification-resent'), 'type' => 'success']]);
     }
 
 }

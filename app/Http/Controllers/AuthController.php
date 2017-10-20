@@ -38,7 +38,7 @@ class AuthController extends Controller
             return Socialite::with('steam')->redirect();
         }
 
-        throw new AuthenticationException(lang('auth.provider-not-supported', ['provider' => $OAuthProvider]));
+        throw new AuthenticationException(lang('phrase.provider-not-supported', ['provider' => $OAuthProvider]));
     }
 
     /**
@@ -59,7 +59,7 @@ class AuthController extends Controller
             if (!$user->full_name OR !$user->email) {
 
                 $alerts = [
-                    ['message' => lang('auth.profile-update-required'), 'type' => 'info']
+                    ['message' => lang('phrase.profile-update-required'), 'type' => 'info']
                 ];
 
                 return redirect()
@@ -69,7 +69,7 @@ class AuthController extends Controller
             return redirect('/');
         }
 
-        throw new AuthenticationException(lang('auth.provider-not-supported', ['provider' => $OAuthProvider]));
+        throw new AuthenticationException(lang('phrase.provider-not-supported', ['provider' => $OAuthProvider]));
     }
 
     /**

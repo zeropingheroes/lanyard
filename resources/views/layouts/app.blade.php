@@ -43,7 +43,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">@lang('routes.login')</a></li>
+                            <li><a href="{{ route('login') }}">@lang('title.login')</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -53,14 +53,14 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ route('user.profile', auth()->user()->id) }}">
-                                            @lang('routes.user.edit')
+                                            @lang('title.profile')
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            @lang('routes.logout')
+                                            @lang('title.logout')
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

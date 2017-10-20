@@ -12,21 +12,21 @@
                     <div class="panel-body">
                         @include('components.alerts')
                         <div class="row">
-                            <div class="col-md-4"><strong>@lang('models.user.username'):</strong></div>
+                            <div class="col-md-4"><strong>@lang('title.username'):</strong></div>
                             <div class="col-md-6">{{ $user->username }}</div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4"><strong>@lang('models.user.full_name'):</strong></div>
+                            <div class="col-md-4"><strong>@lang('title.full-name'):</strong></div>
                             <div class="col-md-6">{{ $user->full_name }}</div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4"><strong>@lang('models.user.email'):</strong></div>
+                            <div class="col-md-4"><strong>@lang('title.email'):</strong></div>
                             <div class="col-md-6">
                                 {{ $user->email }}
                                 @if($user->email_verified)
-                                    <span class="label label-success">@lang('models.user.email_is_verified')</span>
+                                    <span class="label label-success">@lang('title.verified')</span>
                                 @else
-                                    <span class="label label-danger">@lang('models.user.email_is_not_verified')</span>
+                                    <span class="label label-danger">@lang('title.not-verified')</span>
                                 @endif
                             </div>
                         </div>
@@ -34,9 +34,9 @@
                             <div class="row">&nbsp;</div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a class="btn btn-default" href="{{ route('user.edit', $user->id) }}" role="button">@lang('routes.user.edit')</a>
+                                    <a class="btn btn-default" href="{{ route('user.edit', $user->id) }}" role="button">@lang('title.edit-profile')</a>
                                     @if(! $user->email_verified)
-                                        <a class="btn btn-default" href="{{ route('user.email.resend-verification-email', $user->id) }}" role="button">@lang('routes.user.resend-verification-email')</a>
+                                        <a class="btn btn-default" href="{{ route('user.email.resend-verification-email', $user->id) }}" role="button">@lang('title.resend-verification-email')</a>
                                     @endif
                                 </div>
                             </div>
