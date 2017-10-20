@@ -2,7 +2,6 @@
 
 return [
 
-    'please-verify-email' => 'Please verify your email address to complete your registration.',
+    'please-verify-email' => 'Please verify your email address.',
     'verify-email-address' => 'Verify Email Address',
-
 ];
