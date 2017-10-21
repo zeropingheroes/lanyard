@@ -38,4 +38,6 @@ return [
     'verified' => 'Verified',
     'not-verified' => 'Not Verified',
 
+    'admin' => 'Admin',
+
 ];
