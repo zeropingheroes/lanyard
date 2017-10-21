@@ -30,3 +30,7 @@ Route::get('user/{id}/verify-email/{token}', 'UserController@verifyEmail')
 
 Route::get('user/{id}/resend-verification-email', 'UserController@resendVerificationEmail')
     ->name('user.email.resend-verification-email');
+
+Route::get('role-assignment', 'RoleAssignmentController@index')
+    ->middleware('superadmin')
+    ->name('role-assignment.index');

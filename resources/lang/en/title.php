@@ -28,12 +28,14 @@ return [
     'profile' => 'Profile',
     'edit-profile' => 'Edit Profile',
     'update-profile' => 'Update Profile',
+    'role-assignments' => 'Role Assignments',
 
     // Fields
     'username' => 'Username',
     'full-name' => 'Full Name',
     'email' => 'Email Address',
     'confirm-email' => 'Confirm Email Address',
+    'role' => 'Role',
 
     'verified' => 'Verified',
     'not-verified' => 'Not Verified',

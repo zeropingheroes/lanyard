@@ -33,6 +33,13 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="">
                                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> @lang('title.admin')
                             </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('role-assignment.index') }}">
+                                        @lang('title.role-assignments')
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     @endif
                     <li class="dropdown">
