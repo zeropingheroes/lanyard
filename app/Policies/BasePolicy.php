@@ -17,6 +17,8 @@ class BasePolicy
      */
     public function before($user)
     {
-        return $user->hasRole('Super Admin');
+        if ($user->hasRole('Super Admin')) {
+            return true;
+        }
     }
 }
