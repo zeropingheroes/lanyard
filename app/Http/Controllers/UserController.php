@@ -83,7 +83,6 @@ class UserController extends Controller
     {
         $user = User::where('email_verified', false)->findOrFail($id);
 
-        // TODO: Allow verification when not logged in, OR redirect to verification after login
         $this->authorize('update', $user);
 
         if ($user->email_verification_token != $token) {

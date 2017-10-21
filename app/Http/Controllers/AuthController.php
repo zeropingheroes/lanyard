@@ -66,7 +66,7 @@ class AuthController extends Controller
                     ->route('user.edit', $user->id)
                     ->with('alerts', $alerts);
             }
-            return redirect('/');
+            return redirect()->intended('/');
         }
 
         throw new AuthenticationException(lang('phrase.provider-not-supported', ['provider' => $OAuthProvider]));
