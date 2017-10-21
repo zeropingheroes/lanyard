@@ -41,7 +41,7 @@ class User extends Authenticatable
     public function roles()
     {
         return $this
-            ->belongsToMany('Zeropingheroes\Lanyard\Role', 'user_roles')
+            ->belongsToMany('Zeropingheroes\Lanyard\Role', 'role_assignments')
             ->withTimestamps();
     }
 

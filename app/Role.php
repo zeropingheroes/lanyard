@@ -14,7 +14,7 @@ class Role extends Model
     public function users()
     {
         return $this
-            ->belongsToMany('Zeropingheroes\Lanyard\User', 'user_roles')
+            ->belongsToMany('Zeropingheroes\Lanyard\User', 'role_assignments')
             ->withTimestamps();
     }
 }
