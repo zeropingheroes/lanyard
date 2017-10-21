@@ -5,3 +5,5 @@
 # be run after the Homestead machine is provisioned.
 
 php /vagrant/artisan migrate
+cd /vagrant && npm install
+cd /vagrant && npm run dev
