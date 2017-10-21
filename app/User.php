@@ -33,6 +33,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    /**
+     * The roles that belong to the user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function roles()
     {
         return $this
