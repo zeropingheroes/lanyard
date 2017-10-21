@@ -44,4 +44,18 @@ class User extends Authenticatable
             ->belongsToMany('Zeropingheroes\Lanyard\Role', 'user_roles')
             ->withTimestamps();
     }
+
+    /**
+     * Check if the user has the specified role(s)
+     * @param array $roles
+     * @return bool
+     * @internal param $role
+     */
+    public function hasRole(...$roles)
+    {
+        if ($this->roles()->whereIn('name', $roles)->first()) {
+            return true;
+        }
+        return false;
+    }
 }
