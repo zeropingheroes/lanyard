@@ -5,7 +5,7 @@ namespace Zeropingheroes\Lanyard\Policies;
 use Zeropingheroes\Lanyard\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class UserPolicy
+class UserPolicy extends BasePolicy
 {
     use HandlesAuthorization;
 
@@ -18,6 +18,6 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        return $user->id === $model->id OR $user->hasRole('super admin');
+        return $user->id === $model->id;
     }
 }
