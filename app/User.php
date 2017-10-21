@@ -32,4 +32,11 @@ class User extends Authenticatable
     protected $hidden = [
         'remember_token',
     ];
+
+    public function roles()
+    {
+        return $this
+            ->belongsToMany('Zeropingheroes\Lanyard\Role')
+            ->withTimestamps();
+    }
 }
