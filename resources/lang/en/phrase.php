@@ -35,4 +35,7 @@ return [
     'greeting' => 'Hi :username,',
     'signoff' => 'Many thanks',
 
+    // Generic messages
+    'item-successfully-updated' => ':Item successfully updated',
+
 ];

@@ -67,8 +67,9 @@ class UserController extends Controller
 
         $user->save();
 
-        // TODO: Show alert on profile page
-        return redirect()->route('user.profile', $id);
+        return redirect()
+            ->route('user.profile', $id)
+            ->with('alerts', [['message' => lang('phrase.item-successfully-updated', ['item' => 'User profile']), 'type' => 'success']]);
     }
 
     /**
