@@ -33,15 +33,14 @@ Route::get('user/{id}/resend-verification-email', 'UserController@resendVerifica
 
 /* SuperAdmin Pages */
 Route::middleware('superadmin')->group(function () {
+
+    // Role Assignments
     Route::get('role-assignment', 'RoleAssignmentController@index')
         ->name('role-assignment.index');
-
     Route::get('role-assignment/create', 'RoleAssignmentController@create')
         ->name('role-assignment.create');
-
     Route::post('role-assignment', 'RoleAssignmentController@store')
         ->name('role-assignment.store');
-
     Route::delete('role-assignment/{id}', 'RoleAssignmentController@destroy')
         ->name('role-assignment.destroy');
 
