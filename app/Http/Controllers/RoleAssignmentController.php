@@ -62,7 +62,9 @@ class RoleAssignmentController extends Controller
 
         RoleAssignment::create($input);
 
-        return redirect()->route('role-assignment.index');
+        return redirect()
+            ->route('role-assignment.index')
+            ->with('alerts', [['message' => lang('phrase.item-successfully-created', ['item' => lang('title.role-assignment')]), 'type' => 'success']]);
     }
 
     /**
