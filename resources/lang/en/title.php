@@ -51,6 +51,8 @@ return [
     'update-item' => 'Update :Item',
     'delete-item' => 'Delete :Item',
 
+    'item-name' => ':Item Name',
+
     'created' => 'Created',
     'updated' => 'Updated',
 
