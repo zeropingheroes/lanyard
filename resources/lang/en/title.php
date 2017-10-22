@@ -46,4 +46,9 @@ return [
     'assign-role' => 'Assign Role',
     'delete' => 'Delete',
 
+    'create-item' => 'Create :Item',
+    'edit-item' => 'Edit :Item',
+    'update-item' => 'Update :Item',
+    'delete-item' => 'Delete :Item',
+
 ];
