@@ -4,6 +4,7 @@ namespace Zeropingheroes\Lanyard\Http\Controllers;
 
 use Zeropingheroes\Lanyard\RoleAssignment;
 use Illuminate\Http\Request;
+use Validator;
 use Zeropingheroes\Lanyard\{
     User, Role
 };
@@ -39,7 +40,29 @@ class RoleAssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->only(['user_id', 'role_id']);
+
+        $rules = [
+            'user_id' => 'unique:role_assignments,user_id|exists:users,id',
+            'role_id' => 'exists:roles,id',
+        ];
+
+        $messages = [
+            'unique' => lang('phrase.user-already-has-role'),
+        ];
+
+        $validator = Validator::make($input, $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()
+                ->route('role-assignment.create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        RoleAssignment::create($input);
+
+        return redirect()->route('role-assignment.index');
     }
 
     /**

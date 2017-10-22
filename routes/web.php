@@ -38,4 +38,7 @@ Route::middleware('superadmin')->group(function () {
 
     Route::get('role-assignment/create', 'RoleAssignmentController@create')
         ->name('role-assignment.create');
+
+    Route::post('role-assignment', 'RoleAssignmentController@store')
+        ->name('role-assignment.store');
 });

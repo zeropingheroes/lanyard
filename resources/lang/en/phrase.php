@@ -38,4 +38,7 @@ return [
     // Generic messages
     'item-successfully-updated' => ':Item successfully updated',
 
+    // Role assignment
+    'user-already-has-role' => 'The specified user already has a role assigned',
+
 ];
