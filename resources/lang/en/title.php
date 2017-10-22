@@ -39,6 +39,9 @@ return [
     'role-assignment' => 'Role assignment',
     'organiser' => 'Organiser',
     'organisers' => 'Organisers',
+    'venue' => 'Venue',
+    'venues' => 'Venues',
+    'address' => 'Address',
 
     'verified' => 'Verified',
     'not-verified' => 'Not Verified',
@@ -54,6 +57,7 @@ return [
     'delete-item' => 'Delete :Item',
 
     'item-name' => ':Item Name',
+    'name' => 'Name',
 
     'created' => 'Created',
     'updated' => 'Updated',

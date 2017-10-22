@@ -44,6 +44,11 @@
                                         @lang('title.organisers')
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('venue.index') }}">
+                                        @lang('title.venues')
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     @endif

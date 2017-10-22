@@ -53,4 +53,14 @@ Route::middleware('superadmin')->group(function () {
         ->name('organiser.store');
     Route::delete('organiser/{id}', 'OrganiserController@destroy')
         ->name('organiser.destroy');
+
+    // Venues
+    Route::get('venue', 'VenueController@index')
+        ->name('venue.index');
+    Route::get('venue/create', 'VenueController@create')
+        ->name('venue.create');
+    Route::post('venue', 'VenueController@store')
+        ->name('venue.store');
+    Route::delete('venue/{id}', 'VenueController@destroy')
+        ->name('venue.destroy');
 });
