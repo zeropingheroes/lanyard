@@ -6,8 +6,5 @@
                     href="https://github.com/zeropingheroes/lanyard/blob/master/LICENSE.txt" target="_blank">AGPLv3</a></p>
     </div>
 </div>
-
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
