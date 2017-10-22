@@ -53,24 +53,61 @@
                         </div>
                         <div class="form-group">
                             <label for="start"
-                                   class="col-sm-4 control-label">@lang('title.start')</label>
+                                   class="col-sm-4 control-label">@lang('title.start')
+                            </label>
                             <div class="col-sm-6">
-                                <input required type="datetime" class="form-control" id="start" name="start"
-                                       placeholder="@lang('title.start')"
-                                       value="{{ old('start', $event->start) }}">
+                                <div class="input-group date" id="start">
+                                    <input required type="datetime" class="form-control" id="start" name="start"
+                                           placeholder="@lang('title.start')"
+                                           value="{{ old('start', $event->start) }}">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
                             </div>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#start').datetimepicker({
+                                        format: 'YYYY-MM-DD HH:mm:ss',
+                                        stepping: 15
+                                    });
+                                });
+                            </script>
                         </div>
-
 
                         <div class="form-group">
-                            <label for="end"
-                                   class="col-sm-4 control-label">@lang('title.end')</label>
+                            <label for="start"
+                                   class="col-sm-4 control-label">@lang('title.end')
+                            </label>
                             <div class="col-sm-6">
-                                <input required type="datetime" class="form-control" id="end" name="end"
-                                       placeholder="@lang('title.end')"
-                                       value="{{ old('end', $event->end) }}">
+                                <div class="input-group date" id="end">
+                                    <input required type="datetime" class="form-control" id="end" name="end"
+                                           placeholder="@lang('title.end')"
+                                           value="{{ old('end', $event->end) }}">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
                             </div>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#end').datetimepicker({
+                                        format: 'YYYY-MM-DD HH:mm:ss',
+                                        stepping: 15
+                                    });
+                                });
+                            </script>
                         </div>
+
+                        <script type="text/javascript">
+                            $("#start").on("dp.change", function (e) {
+                                $('#end').data("DateTimePicker").minDate(e.date);
+                            });
+//                            $("#end").on("dp.change", function (e) {
+//                                $('#start').data("DateTimePicker").maxDate(e.date);
+//                            });
+                        </script>
+
                         <div class="form-group">
                             <label for="terms-and-conditions"
                                    class="col-sm-4 control-label">@lang('title.terms-and-conditions')</label>
