@@ -13,9 +13,9 @@
                     <form class="form-horizontal" action="{{ route('role-assignment.create') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">@lang('title.user')</label>
+                            <label for="user_id" class="col-sm-4 control-label">@lang('title.user')</label>
                             <div class="col-sm-6">
-                                <select class="form-control">
+                                <select class="form-control" name="user_id">
                                     @foreach($users as $user)
                                         <option value="{{$user->id}}">{{$user->username}}</option>
                                     @endforeach
@@ -24,9 +24,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="col-sm-4 control-label">@lang('title.role')</label>
+                            <label for="role_id" class="col-sm-4 control-label">@lang('title.role')</label>
                             <div class="col-sm-6">
-                                <select class="form-control">
+                                <select class="form-control" name="role_id">
                                     @foreach($roles as $role)
                                         <option value="{{$role->id}}">{{$role->name}}</option>
                                     @endforeach
