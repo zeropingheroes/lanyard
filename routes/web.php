@@ -44,4 +44,14 @@ Route::middleware('superadmin')->group(function () {
 
     Route::delete('role-assignment/{id}', 'RoleAssignmentController@destroy')
         ->name('role-assignment.destroy');
+
+    // Organisers
+    Route::get('organiser', 'OrganiserController@index')
+        ->name('organiser.index');
+    Route::get('organiser/create', 'OrganiserController@create')
+        ->name('organiser.create');
+    Route::post('organiser', 'OrganiserController@store')
+        ->name('organiser.store');
+    Route::delete('organiser/{id}', 'OrganiserController@destroy')
+        ->name('organiser.destroy');
 });

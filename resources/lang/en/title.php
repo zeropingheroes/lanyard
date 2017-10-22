@@ -37,6 +37,8 @@ return [
     'confirm-email' => 'Confirm Email Address',
     'role' => 'Role',
     'role-assignment' => 'Role assignment',
+    'organiser' => 'Organiser',
+    'organisers' => 'Organisers',
 
     'verified' => 'Verified',
     'not-verified' => 'Not Verified',

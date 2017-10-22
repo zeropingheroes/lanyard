@@ -39,6 +39,11 @@
                                         @lang('title.role-assignments')
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('organiser.index') }}">
+                                        @lang('title.organisers')
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     @endif
