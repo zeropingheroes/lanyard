@@ -51,4 +51,7 @@ return [
     'update-item' => 'Update :Item',
     'delete-item' => 'Delete :Item',
 
+    'created' => 'Created',
+    'updated' => 'Updated',
+
 ];
