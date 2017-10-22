@@ -36,7 +36,9 @@ return [
     'signoff' => 'Many thanks',
 
     // Generic messages
+    'item-successfully-created' => ':Item successfully created',
     'item-successfully-updated' => ':Item successfully updated',
+    'item-successfully-deleted' => ':Item successfully deleted',
 
     // Role assignment
     'user-already-has-role' => 'The specified user already has a role assigned',
