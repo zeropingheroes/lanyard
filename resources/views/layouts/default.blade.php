@@ -1,6 +1,4 @@
 @include('layouts.partials.header')
 @include('layouts.partials.nav')
-<div class="container">
-    @yield('content')
-</div>
+@include('layouts.partials.content')
 @include('layouts.partials.footer');
