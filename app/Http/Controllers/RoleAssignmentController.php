@@ -71,8 +71,11 @@ class RoleAssignmentController extends Controller
      * @param  \Zeropingheroes\Lanyard\RoleAssignment $roleAssignment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RoleAssignment $roleAssignment)
+    public function destroy(RoleAssignment $roleAssignment, $id)
     {
-        //
+        $roleAssignment::destroy($id);
+        return redirect()
+            ->route('role-assignment.index')
+            ->with('alerts', [['message' => lang('phrase.item-successfully-deleted', ['item' => lang('title.role-assignment')]), 'type' => 'success']]);
     }
 }

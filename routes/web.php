@@ -41,4 +41,7 @@ Route::middleware('superadmin')->group(function () {
 
     Route::post('role-assignment', 'RoleAssignmentController@store')
         ->name('role-assignment.store');
+
+    Route::delete('role-assignment/{id}', 'RoleAssignmentController@destroy')
+        ->name('role-assignment.destroy');
 });

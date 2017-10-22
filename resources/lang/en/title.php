@@ -36,6 +36,7 @@ return [
     'email' => 'Email Address',
     'confirm-email' => 'Confirm Email Address',
     'role' => 'Role',
+    'role-assignment' => 'Role assignment',
 
     'verified' => 'Verified',
     'not-verified' => 'Not Verified',
@@ -43,5 +44,6 @@ return [
     'admin' => 'Admin',
     'assign-a-role' => 'Assign a Role',
     'assign-role' => 'Assign Role',
+    'delete' => 'Delete',
 
 ];
