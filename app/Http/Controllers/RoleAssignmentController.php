@@ -66,40 +66,6 @@ class RoleAssignmentController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \Zeropingheroes\Lanyard\RoleAssignment $roleAssignment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(RoleAssignment $roleAssignment)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \Zeropingheroes\Lanyard\RoleAssignment $roleAssignment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(RoleAssignment $roleAssignment)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Zeropingheroes\Lanyard\RoleAssignment $roleAssignment
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, RoleAssignment $roleAssignment)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \Zeropingheroes\Lanyard\RoleAssignment $roleAssignment
