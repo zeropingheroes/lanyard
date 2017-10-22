@@ -10,15 +10,6 @@
 
                 <div class="panel-body">
                     @include('components.alerts')
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                     <form class="form-horizontal" action="{{ route('user.update', $user->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}

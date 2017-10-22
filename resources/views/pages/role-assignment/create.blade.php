@@ -9,15 +9,6 @@
                 <div class="panel-heading"><h1>@lang('title.assign-a-role')</h1></div>
                 <div class="panel-body">
                     @include('components.alerts')
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                     <form class="form-horizontal" action="{{ route('role-assignment.store') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
