@@ -36,4 +36,6 @@ Route::middleware('superadmin')->group(function () {
     Route::get('role-assignment', 'RoleAssignmentController@index')
         ->name('role-assignment.index');
 
+    Route::get('role-assignment/create', 'RoleAssignmentController@create')
+        ->name('role-assignment.create');
 });

@@ -41,5 +41,7 @@ return [
     'not-verified' => 'Not Verified',
 
     'admin' => 'Admin',
+    'assign-a-role' => 'Assign a Role',
+    'assign-role' => 'Assign Role',
 
 ];

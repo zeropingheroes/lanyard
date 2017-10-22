@@ -4,6 +4,9 @@ namespace Zeropingheroes\Lanyard\Http\Controllers;
 
 use Zeropingheroes\Lanyard\RoleAssignment;
 use Illuminate\Http\Request;
+use Zeropingheroes\Lanyard\{
+    User, Role
+};
 
 class RoleAssignmentController extends Controller
 {
@@ -25,7 +28,7 @@ class RoleAssignmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.role-assignment.create', ['roles' => Role::all(), 'users' => User::all()]);
     }
 
     /**
