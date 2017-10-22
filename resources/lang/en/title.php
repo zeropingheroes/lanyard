@@ -30,7 +30,7 @@ return [
     'update-profile' => 'Update Profile',
     'role-assignments' => 'Role Assignments',
 
-    // Fields
+    'user' => 'User',
     'username' => 'Username',
     'full-name' => 'Full Name',
     'email' => 'Email Address',

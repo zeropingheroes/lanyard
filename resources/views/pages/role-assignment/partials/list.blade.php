@@ -1,7 +1,7 @@
 @if( $roleAssignments )
     <table class="table">
         <tr>
-            <th>@lang('title.username')</th>
+            <th>@lang('title.user')</th>
             <th>@lang('title.role')</th>
         </tr>
         @foreach($roleAssignments as $roleAssignment)
