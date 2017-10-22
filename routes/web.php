@@ -63,4 +63,14 @@ Route::middleware('superadmin')->group(function () {
         ->name('venue.store');
     Route::delete('venue/{id}', 'VenueController@destroy')
         ->name('venue.destroy');
+
+    // Events
+    Route::get('event', 'EventController@index')
+        ->name('event.index');
+    Route::get('event/create', 'EventController@create')
+        ->name('event.create');
+    Route::post('event', 'EventController@store')
+        ->name('event.store');
+    Route::delete('event/{id}', 'EventController@destroy')
+        ->name('event.destroy');
 });

@@ -41,7 +41,13 @@ return [
     'organisers' => 'Organisers',
     'venue' => 'Venue',
     'venues' => 'Venues',
+    'event' => 'Event',
+    'events' => 'Events',
     'address' => 'Address',
+    'capacity' => 'Capacity',
+    'start' => 'Start',
+    'end' => 'End',
+    'terms-and-conditions' => 'Terms & Conditions',
 
     'verified' => 'Verified',
     'not-verified' => 'Not Verified',
