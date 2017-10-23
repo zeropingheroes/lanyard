@@ -6,7 +6,7 @@
  */
 
 require('./bootstrap');
-require('../../../node_modules/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js')
+require('eonasdan-bootstrap-datetimepicker')
 
 // window.Vue = require('vue');
 
